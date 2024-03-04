@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Input fields for rectangle coordinates and dimensions -->
+        <EditText
+            android:id="@+id/editTextTopLeftX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Top Left X"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextTopLeftY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Top Left Y"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/editTextTopLeftX"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Width"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/editTextTopLeftX"/>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Height"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/editTextTopLeftX"
+            android:layout_toEndOf="@id/editTextWidth"
+            android:layout_marginStart="16dp"/>
+
+        <!-- Button to add rectangle -->
+        <Button
+            android:id="@+id/buttonAddRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Rectangle"
+            android:layout_below="@id/editTextHeight"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Button to compare rectangles -->
+        <Button
+            android:id="@+id/buttonCompareRectangles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compare Rectangles"
+            android:layout_below="@id/buttonAddRectangle"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Button to reset rectangles -->
+        <Button
+            android:id="@+id/buttonResetRectangles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Rectangles"
+            android:layout_below="@id/buttonCompareRectangles"
+            android:layout_marginTop="16dp"/>
+
+        <!-- TextView to display rectangle objects -->
+        <TextView
+            android:id="@+id/textViewRectangles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@id/buttonResetRectangles"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Display area for rectangles -->
+        <LinearLayout
+            android:id="@+id/layoutRectangles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textViewRectangles"
+            android:orientation="vertical"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
